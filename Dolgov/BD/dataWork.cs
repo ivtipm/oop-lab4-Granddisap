@@ -139,6 +139,11 @@ namespace BD
         {
             spFiles.Sort(new Comparison(sortDirection));
         }
+
+        public static implicit operator dataWork(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public enum SortDirection

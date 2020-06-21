@@ -11,7 +11,6 @@ C:\Users\grand\OneDrive\Рабочий стол\BD\obj\Debug\BD.pdb
 C:\Users\grand\OneDrive\Рабочий стол\Новая папка (2)\oop-lab4-Granddisap\Dolgov\BD\bin\Debug\BD.exe.config
 C:\Users\grand\OneDrive\Рабочий стол\Новая папка (2)\oop-lab4-Granddisap\Dolgov\BD\bin\Debug\BD.exe
 C:\Users\grand\OneDrive\Рабочий стол\Новая папка (2)\oop-lab4-Granddisap\Dolgov\BD\bin\Debug\BD.pdb
-C:\Users\grand\OneDrive\Рабочий стол\Новая папка (2)\oop-lab4-Granddisap\Dolgov\BD\obj\Debug\BD.csprojAssemblyReference.cache
 C:\Users\grand\OneDrive\Рабочий стол\Новая папка (2)\oop-lab4-Granddisap\Dolgov\BD\obj\Debug\BD.Form1.resources
 C:\Users\grand\OneDrive\Рабочий стол\Новая папка (2)\oop-lab4-Granddisap\Dolgov\BD\obj\Debug\BD.Properties.Resources.resources
 C:\Users\grand\OneDrive\Рабочий стол\Новая папка (2)\oop-lab4-Granddisap\Dolgov\BD\obj\Debug\BD.SearchForm.resources

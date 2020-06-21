@@ -142,11 +142,9 @@ namespace BD
             }
         }
 
-        private void поискToolStripMenuItem_Click(object sender, EventArgs e)
+        public void поискToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SearchForm frm = new SearchForm();
-            frm.Owner = this;
-            frm.Show();
+            
         }
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -199,6 +197,29 @@ namespace BD
         {
             string info = "Выполнил: А.А. Долгов" + "\n\n" + "2020 г.";
             MessageBox.Show(info, "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if ((data.SpFiles.Count == 0) || (textBox5.Text == ""))
+                return;
+            dataGridView1.ClearSelection();
+            List<int> foundElements = data.SearchSpravFile(textBox5.Text);
+            if (foundElements[0] == -1)
+            {
+                MessageBox.Show("Ничего не удалось найти!");
+                return;
+            }
+            dataGridView1.CurrentCell = dataGridView1[0, foundElements[0]];
+            for (int i = 0; i < foundElements.Count; i++)
+            {
+                dataGridView1.Rows[foundElements[i]].Selected = true;
+            }
         }
     }
 }
