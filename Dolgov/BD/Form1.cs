@@ -15,8 +15,8 @@ namespace BD
     public partial class Form1 : Form
     {
         dataWork data = new dataWork();
-        string oldValue = "";
         string filename = "";
+        string resultfn;
         public Form1()
         {
             InitializeComponent();
@@ -91,7 +91,8 @@ namespace BD
                 if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
                     return;
                 filename = saveFileDialog1.FileName;
-                this.Text = filename + " - Справочник";
+                resultfn = Path.GetFileName(filename);
+                this.Text = resultfn + " - Справочник";
             }
             data.SaveFile(filename);
         }
@@ -101,7 +102,8 @@ namespace BD
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
             filename = openFileDialog1.FileName;
-            this.Text = filename + " - Справочник";
+            resultfn = Path.GetFileName(filename);
+            this.Text = resultfn + " - Справочник";
             dataGridView1.Rows.Clear();
             data.OpenFile(filename);
             WriteToDataGrid();
