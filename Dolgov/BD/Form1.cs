@@ -24,6 +24,15 @@ namespace BD
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
             saveFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(button1, "Сортировать по ID.");
+            tip.SetToolTip(button3, "Поиск человека по ID, имени, почте, телефону или городу.");
+            tip.SetToolTip(textBox1, "Поле ввода имени.");
+            tip.SetToolTip(textBox2, "Поле ввода почты.");
+            tip.SetToolTip(textBox3, "Поле ввода мобильного телефона.");
+            tip.SetToolTip(textBox4, "Поле ввода города.");
+            tip.SetToolTip(button2, "Добавить человека.");
+            tip.SetToolTip(dataGridView1, "Ваш справочник.");
         }
         public ushort generateID()
         {
