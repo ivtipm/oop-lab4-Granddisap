@@ -134,5 +134,38 @@ namespace BD
                 count.Add(-1);
             return count;
         }
+
+        public void Sort(SortDirection sortDirection)
+        {
+            spFiles.Sort(new Comparison(sortDirection));
+        }
+    }
+
+    public enum SortDirection
+    {
+        Ascending,
+        Descending
+    }
+
+    public class Comparison : IComparer
+    {
+        private SortDirection m_direction = SortDirection.Ascending;
+
+        public Comparison() : base() { }
+
+        public Comparison(SortDirection direction)
+        {
+            this.m_direction = direction;
+        }
+
+        int IComparer.Compare(object x, object y)
+        {
+            SpravFile sprav1 = (SpravFile)x;
+            SpravFile sprav2 = (SpravFile)y;
+
+            return (this.m_direction == SortDirection.Ascending) ?
+                sprav1.Id.CompareTo(sprav2.Id) :
+                sprav2.Id.CompareTo(sprav1.Id);
+        }
     }
 }

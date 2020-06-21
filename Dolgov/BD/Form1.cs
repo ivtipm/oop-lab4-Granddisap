@@ -127,7 +127,19 @@ namespace BD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            if (data.SpFiles.Count != 0)
+            {
+                dataGridView1.Rows.Clear();
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    data.Sort(SortDirection.Ascending);
+                }
+                else
+                {
+                    data.Sort(SortDirection.Descending);
+                }
+                WriteToDataGrid();
+            }
         }
 
         private void поискToolStripMenuItem_Click(object sender, EventArgs e)
@@ -181,6 +193,12 @@ namespace BD
         private void файлToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string info = "Выполнил: А.А. Долгов" + "\n\n" + "2020 г.";
+            MessageBox.Show(info, "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
